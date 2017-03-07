@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        .container{
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .d3 ul li{
+            list-style:none;
+            float:left;
+            padding-left:20px;
+            padding-right:20px;
+
+        }
+        .d3 ul a{
+            font-family:Microsoft yahei;
+            font-size:small;
+            color:#676767;
+            text-decoration:none;
+        }
+        .d3 ul a:hover{
+            color:#ff8502;
+        }
+        .d4-1{
+            float:left;
+            padding-top:20px;
+        }
+        .d4-2{
+            float:left;
+            width:35%;
+            height:400px;
+            padding:20px;
+        }
+        .d4-2-1{
+            background-color:#f8f8f8;
+        }
+        .d4-2-1 ul li{
+            list-style:none;
+            float:left;
+            padding:0 10px 0 10px;
+            margin:0px;
+            color:#393902;
+            font-size:16px;
+        }
+        .d4-2-1 ul a{
+            font-family:Microsoft yahei;
+            color:#020202;
+            text-decoration:none;
+        }
+        .d4-2-1 ul a:hover{
+            color:#ff8502;
+        }
+        .d4-2-2{
+            padding:20px;
+
+        }
+        .d4-2-3{
+            padding:0 20px 0 20px;
+
+        }
+        .d4-2-2-2 ul li{
+            list-style:none;
+
+        }
+        .d4-2-2-2 ul a{
+            font-family:Microsoft yahei;
+            color:142F68;
+            text-decoration:none;
+            font-size:14px;
+        }
+        .d4-2-2-2 ul a:hover{
+            color:#ff8502;
+        }
+        .d4-2-2-1{
+            float:left;
+            width:20%;
+
+        }
+        .d4-2-2-2{
+            float:right;
+
+        }
+        .d4-3{
+            float:left;
+            width:40%;
+            height:400px;
+            padding:4px;
+
+        }
+        .d4-2-2-2 ul{
+
+        }
+        .d4-2-2-2 ul a{
+            font-family:Microsoft yahei;
+            color:#142F68;
+            text-decoration:none;
+            font-size:16px;
+        }
+        .d4-2-2-2 ul a:hover{
+            color:#ff8502;
+        }
+
+        .d4-2-2-3 ul{
+            padding:0px;
+            margin:0px;
+        }
+        .d4-2-2-3 ul li{
+            list-style:none;
+
+        }
+        .d4-2-2-3 ul a{
+            font-family:Microsoft yahei;
+            color:#142F68;
+            text-decoration:none;
+            font-size:15px;
+
+        }
+        .d4-2-2-3 ul a:hover{
+            color:#ff8502;
+        }
+
+        .d4-2-2-4 ul li{
+            color:#ff8502;
+
+        }
+        .d4-2-2-4 ul a{
+            font-family:Microsoft yahei;
+            color:#142F68;
+            text-decoration:none;
+            font-size:16px;
+
+        }
+        .d4-2-2-4 a:hover{
+            color:#ff8502;
+        }
+        .d4-3-1{
+            background-color:#f8f8f8;
+        }
+        .d4-3-1 ul li{
+            list-style:none;
+            float:left;
+            padding-left:10px;
+            padding-right:10px;
+        }
+        .d4-3-1 ul a{
+            font-family:Microsoft yahei;
+            color:#020202;
+            text-decoration:none;
+        }
+        .d4-3-1 ul a:hover{
+            color:#ff8502;
+        }
+        .pagetag1{
+            margin:0px;
+            border:1px solid #dbdee1;
+            overflow:hidden;
+            background:linear-gradient(to bottom,#fafafa 0%,#f6f6f6 100%);
+        }
+
+        .pagetag1 li:nth-child(3):hover{
+             border:1px solid #dbdee1;
+            border-top:2px solid #ff8502;
+        }
+        .pagetag1 li:nth-child(2):hover{
+            border:1px solid #dbdee1;
+            border-top:2px solid #ff8502;
+        }
+        .pagetag1 li:nth-child(1):hover{
+            border:1px solid #dbdee1;
+            border-top:2px solid #ff8502;
+        }
+
+
+        .pagetag2{
+
+            border:1px solid #dbdee1;
+            overflow:hidden;
+            background:linear-gradient(to bottom,#fafafa 0%,#f6f6f6 100%);
+
+        }
+
+        .pagetag2 li:hover{
+            border:1px solid #dbdee1;
+            border-top:2px solid #ff8502;
+        }
+        .pagetag3{
+
+            border:1px solid #dbdee1;
+            overflow:hidden;
+            background:linear-gradient(to bottom,#fafafa 0%,#f6f6f6 100%);
+            padding:0px;
+
+        }
+
+        .pagetag3 li:hover{
+            border:1px solid #dbdee1;
+            border-top:2px solid #ff8502;
+        }
+        .d5{
+            float:left;
+            width:240px;
+            border-top:2px solid #ff8502;
+            border-bottom:1px solid #E3E6ED;
+            border-right:1px solid #E3E6ED;
+            border-left:1px solid #E3E6ED;
+        }
+        .d5-2-ul{
+            padding:0px 0 10px 0px;
+        }
+         .d5-2 ul li{
+             float:left;
+             list-style:none;
+
+         }
+        .d5-2 ul a{
+            font-family:Microsoft yahei;
+            color:#676767;
+            text-decoration:none;
+            padding-right:10px;
+            padding-left:10px;
+            font-size:14px;
+        }
+        .d5 a:hover{
+            color:#ff8502;
+        }
+        .d5-3{
+
+            border:1px dashed #676767;
+        }
+        .d6{
+            float:left;
+            margin:50px;
+            width:420px;
+        }
+        .d6-2 ul li{
+            color:#ff8502;
+            padding-top:5px;
+
+        }
+        .d6-2 ul a{
+            font-family:Microsoft yahei;
+            color:#142F68;
+            text-decoration:none;
+
+        }
+        .d6-2 ul a:hover{
+            color:#ff8502;
+        }
+        .d6-2-1 pre{
+            color:#5A6B7C;
+            font-size:15px;
+        }
+        .d7-1{
+            position:absolute;
+            top:850px;
+        }
+        .d7-2{
+            position:absolute;
+            top:990px;
+            left:350px;
+            width:420px;
+        }
+        .d7-2-2{
+            position:absolute;
+            top:140px;
+            left:px;
+        }
+
+        .d7-2-1{
+            position:absolute;
+            top:120px;
+            left:60px;
+        }
+        .d7-2-1 ul li{
+            list-style:none;
+            float:left;
+            padding:0 10px 0 10px;
+            margin:0px;
+            color:#393902;
+            font-size:16px;
+        }
+        .d7-2-1 ul a{
+            font-family:Microsoft yahei;
+            color:#020202;
+            text-decoration:none;
+        }
+        .d7-2-1 ul a:hover{
+            color:#ff8502;
+        }
+        .d7-2-2-1{
+            float:left;
+            padding:10px;
+
+        }
+
+        .d7-2-2-2{
+            float:left;
+            padding:0px;
+            width:250px;
+        }
+        .d7-2-2-2 ul{
+            width:250px;
+        }
+
+        .d7-2-2-2 ul li{
+            color:#ff8502;
+            padding:0 5px 0 0;
+
+
+        }
+        .d7-2-2-2 ul a{
+            font-family:Microsoft yahei;
+            color:#142F68;
+            text-decoration:none;
+
+        }
+        .d7-2-2-2 ul a:hover{
+            color:#ff8502;
+        }
+        .d7-2-2-3{
+            float:left;
+            padding:0px;
+            width:420px;
+        }
+        .d7-2-2-3 ul{
+            margin:0px;
+        }
+
+        .d7-2-2-3 ul li{
+            color:#ff8502;
+            padding:0 5px 0 0;
+
+
+        }
+        .d7-2-2-3 ul a{
+            font-family:Microsoft yahei;
+            color:#142F68;
+            text-decoration:none;
+
+        }
+        .d7-2-2-3 ul a:hover{
+            color:#ff8502;
+        }
+        .d7-2-3{
+            position:absolute;
+            top:0px;
+            left:500px;
+        }
+        .d8{
+            float:left;
+            position:absolute;
+            top:1400px;
+
+        }
+
+        .d1{
+            background-color:#FCFCFC;
+            padding:10px 0 10px 0;
+            overflow:hidden;
+            border-top:2px solid #ff8502;
+        }
+
+        .d1-1{
+            margin:0;
+        }
+        .d1-2{
+            margin:0;
+        }
+        .d1-1 li{
+            list-style:none;
+            float:left;
+        }
+        .d1-1 a{
+              font-family:Microsoft yahei;
+              color:#4D4D4D;
+              text-decoration:none;
+              padding-right:20px;
+        }
+        .d1-1 a:hover{
+            color:#ff8502;
+        }
+
+        .d1-2 li{
+            list-style:none;
+            float:right;
+        }
+        .d1-2 a{
+            font-family:Microsoft yahei;
+            color:#4D4D4D;
+            text-decoration:none;
+            padding-right:20px;
+        }
+        .d1-2 a:hover{
+            color:#ff8502;
+        }
+
+        .d9-1{
+            float:left;
+        }
+        .d9-2{
+             float:left;
+            position:absolute;
+            top:80px;
+            left:300px;
+         }
+        .d9-3{
+              float:left;
+            position:absolute;
+            top:70px;
+            left:600px;
+          }
+        .d9-3 ul li{
+            list-style:none;
+            float:left;
+
+        }
+        .d9-3 ul a{
+            color:#7B7975;
+            font-family:Microsoft yahei;
+        }
+        .d9-4{
+               float:right;
+           }
+
+        .d7-2-3-1{
+            position:absolute;
+            top:120px;
+            left:60px;
+        }
+        .d7-2-3-1 ul{
+            width:300px;
+        }
+        .d7-2-3-1 ul li{
+            list-style:none;
+            float:left;
+            padding:0 10px 0 10px;
+            margin:0px;
+            color:#393902;
+            font-size:16px;
+        }
+        .d7-2-3-1 ul a{
+            font-family:Microsoft yahei;
+            color:#020202;
+            text-decoration:none;
+        }
+        .d7-2-3-1 ul a:hover{
+            color:#ff8502;
+        }
+        .d7-2-3-2{
+            position:absolute;
+            top:150px;
+            left:px;
+        }
+
+
+        .d7-2-3-3{
+            float:left;
+            padding:0px;
+            width:250px;
+            position:absolute;
+            top:140px;
+            left:100px;
+        }
+        .d7-2-3-3 ul{
+            width:250px;
+        }
+
+        .d7-2-3-3 ul li{
+            color:#ff8502;
+            padding:0 5px 0 0;
+
+
+        }
+        .d7-2-3-3 ul a{
+            font-family:Microsoft yahei;
+            color:#142F68;
+           font-size:14px;
+            text-decoration:none;
+
+        }
+        .d7-2-3-3 ul a:hover{
+            color:#ff8502;
+        }
+
+
+        .d7-2-3-4{
+            position:absolute;
+            top:250px;
+            left:px;
+        }
+
+
+        .d7-2-3-5{
+            float:left;
+            padding:0px;
+            width:250px;
+            position:absolute;
+            top:240px;
+            left:100px;
+        }
+        .d7-2-3-5 ul{
+            width:250px;
+        }
+
+        .d7-2-3-5 ul li{
+            color:#ff8502;
+            padding:0 5px 0 0;
+
+
+        }
+        .d7-2-3-5 ul a{
+            font-family:Microsoft yahei;
+            color:#142F68;
+
+            text-decoration:none;
+
+        }
+        .d7-2-3-5 ul a:hover{
+            color:#ff8502;
+        }
+
+
+
+
+
+        .d7-2-3-6{
+            float:left;
+            padding:0px;
+            width:420px;
+            position:absolute;
+            top:350px;
+
+        }
+        .d7-2-3-6 ul{
+            margin:0px;
+        }
+
+        .d7-2-3-6 ul li{
+            color:#ff8502;
+            padding:0 5px 0 0;
+
+
+        }
+        .d7-2-3-6 ul a{
+            font-family:Microsoft yahei;
+            color:#142F68;
+            text-decoration:none;
+
+        }
+        .d7-2-3-6 ul a:hover{
+            color:#ff8502;
+        }
+        .d10{
+            position:absolute;
+            top:1270px;
+            left:100px
+        }
+    </style>
+
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="d1">
+
+        <ul class="d1-1">
+            <li><a href="">设为首页</a></li>
+            <li><a href="">手机新浪网</a></li>
+           <li><a href="">移动客户端</a></li>
+        </ul>
+        <ul class="d1-2">
+           <li><a href="">网站导航</a></li>
+            <li><a href="">邮箱</a></li>
+            <li><a href="">邮箱</a></li>
+            <li><a href="">博客</a></li>
+            <li><a href="">微博</a></li>
+            <li><a href="">登录</a></li>
+        </ul>
+
+    </div>
+    <div style="cear:both"></div>
+
+    <div class="d9">
+        <div class="d9-1">
+            <a href=""><img src="新浪网.png"></a>
+        </div>
+        <div style="cear:both"></div>
+        <div class="d9-2">
+            微博 <input type="text" placeholder="请输入关键字">
+            <input type="submit" value="搜索" style="background-color:#ff8502;border:0;">
+
+        </div>
+        <div style="cear:both"></div>
+        <div class="d9-3">
+           <ul>
+               <li>哈尔滨</li>
+               <li><img src="月亮.png"></li>
+               <li>-4℃</li>
+           </ul>
+
+        </div>
+        <div class="d9-4">
+            <a href=""><img src="华表.png"></a>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+    <div class="d2">
+        <a href=""><img src="恒源祥.png" style="width:100%"></a>
+    </div>
+
+    <div class="d3">
+         <ul>
+             <li><a href="">免费设计怎能不要</a></li>
+             <li><a href="">装修小户型这样省</a></li>
+             <li><a href="">从阳台看穿你人品</a></li>
+             <li><a href="">想蜗居，何必肉偿</a></li>
+             <li><a href="">独居少女床边必备</a></li>
+             <li><a href="">他干的很棒却不贵</a></li>
+             <li><a href="">想看别人家就来这</a></li>
+             <li><a href="">不知道这就别装修</a></li>
+         </ul>
+    </div>
+
+    <div class="d4">
+        <div class="d4-1">
+            <a href=""><img src="左侧.png"></a>
+        </div>
+
+        <div class="d4-2">
+           <div class="d4-2-1">
+             <ul class="pagetag1">
+                 <li><a href="">视频</a></li>
+                 <li><a href="">综艺</a></li>
+                 <li><a href="">秒拍</a></li>
+                 <li><small><a href="" style="color:#ff8502;">新闻可否游戏化？</a></small></li>
+                 <li><small><a href="" style="color:#FF0202;">换一换</a></small></li>
+             </ul>
+           </div>
+            <div class="d4-2-2">
+              <div class="d4-2-2-1">
+                <a href=""><img src="黄晓明.png"  align="center"></a>
+              </div>
+                <div class="d4-2-2-2">
+                  <ul>
+                    <li><img src="摄像机.png" align="center"><small><a href="">邓紫棋带弟弟一起出镜笑不停</a></small></li>
+                    <li><img src="摄像机.png" align="center"><small><a href="">李冰冰回答网友的杀马特调侃</a></small></li>
+                    <li><img src="摄像机.png" align="center"><small><a href="">昆凌谈怀宝宝心情 开心感动</a></small></li>
+                    <li><img src="摄像机.png" align="center"><small><a href="">张碧晨忧郁眼神只想安安静静</a></small></li>
+                    <li><img src="摄像机.png" align="center"><small><a href="">峰哥打群架 怂B是这样炼成的</a></small></li>
+                  </ul>
+                </div>
+            </div>
+            <div style="clear:both"></div>
+            <div class="d4-2-3">
+                <div class="d4-2-2-1">
+                    <a href=""><img src="吴亦凡.png" align="center"></a>
+                </div>
+                <div class="d4-2-2-2">
+                    <ul>
+                        <li><img src="摄像机.png" align="center"><small><a href="">#和秒拍一起寻找橙色#tf魅力</a></small></li>
+                        <li><img src="摄像机.png" align="center"><small><a href="">每一次啪啪啪最后都是泪眼泪</a></small></li>
+                        <li><img src="摄像机.png" align="center"><small><a href="">高颜值街采！超模天团爆怪癖</a></small></li>
+                        <li><img src="摄像机.png" align="center"><small><a href="">单身汪泡妹子使出终极大招</a></small></li>
+                        <li><img src="摄像机.png" align="center"><small><a href="">#红鲤鱼与绿鲤鱼与驴#已玩疯</a></small></li>
+                    </ul>
+                </div>
+                <div style="clear:both"></div>
+                <div class="d4-2-2-3">
+                    <ul>
+                        <li><img src="摄像机.png" align="center"><small><a href="">栏目|叛逆王子逼哭精灵王 冷血被骂屎壳郎机智复仇</a></small></li>
+                        <li><img src="摄像机.png" align="center"><small><a href="">美女|妹子这样表白无法抗拒 感受韩国模特的火辣</a></small></li>
+                        <li><img src="摄像机.png" align="center"><small><a href="">搞笑|看完觉得二位都有病 太疯狂！老太相亲小鲜肉</a></small></li>
+                        <li><img src="摄像机.png" align="center"><small><a href="">逗比|超逗大连话再次来袭 国共合作失败的根本原因</a></small></li>
+                        <li><img src="摄像机.png" align="center"><small><a href="">牛人|史上最牛B的街头艺人 牛人挑战极限高压深入</a></small></li>
+                        <li><img src="摄像机.png" align="center"><small><a href="">萌宠|史上最屈辱的两条狗 汪星人逆天站立热舞</a></small></li>
+                        <li><img src="摄像机.png" align="center"><small><a href="">萌宝|艺彬小受拍拍要折寿啦 超萌小萝莉眼睛会说话</a></small></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="d4-3">
+
+            <div class="d4-3-1">
+                <ul class="pagetag2">
+                    <li><a href="">新闻</a></li>
+                    <li><a href="">看龙江</a></li>
+                    <li><a href="">图片</a></li>
+                    <li><a href="">专栏</a></li>
+
+                </ul>
+            </div>
+            <div class="d4-2-2-4">
+                <ul>
+                    <li><small><a href="">李克强：东北要重拾“闯关东”精神 我省拟改造延边铁路</a></small></li>
+                    <li><small><a href="">2015中国城市60强出路 哈尔滨排22为三线增长型城市</a></small></li>
+                    <li><small><a href="">哈尔滨上演现实版“黄金大劫案” 嫌疑人被抓 图集</a></small></li>
+                    <li><small><a href="">揭秘嫌疑人 做过商场修电工 自学开保险箱 逃跑路线</a></small></li>
+                    <li><small><a href="">新浪黑龙江上线三周年：粉丝狂欢节 好礼送不停</a></small></li>&nbsp
+                    <li><small><a href="">刘德成任鹤岗市副市长 哈齐客专特大桥高速段施工完毕</a></small></li>
+                    <li><small><a href="">哈尔滨市下月将成倍没快件中国集散地 海涛省时省钱</a></small></li>
+                    <li><small><a href="">哈尔滨小学招生新规公布 涉及划片原则对口初中等问题</a></small></li>
+                    <li><small><a href="">黑龙江人身高全国排第三位 专家揭秘身高丢失原因</a></small></li>
+                    <li><small><a href="">大庆小伙登顶四川四姑娘山 被我某军看上当特种兵</a></small></li>
+                    <li><small><a href="">最瞬间|90后一共流年甘当智障儿童保姆感动冰城（图）</a></small></li>
+                    <li><small><a href="">加拿大女子长城撞死黑龙江老太 警方认定意外不予立案</a></small></li>
+                    <li><small><a href="">哈尔滨闽江路一水果店起火 殃及七家相邻商服（图）</a></small></li>
+                    <li><a href="">冰城球迷自掏腰包为毅腾直播 盘点龙江球迷的感人事迹</a></small></li>
+                    <li><a href="">哈尔滨巴彦男子索要180万款未果 用刀捅死夫妻俩（图）</a></small></li>
+                    <li><a href="">马里奥大叔已被网友玩坏 快来膜拜黑大学霸</a></small></li>
+                    <li><a href="">哈尔滨实用街道大全 要啥就去哪 哈尔滨著名七大夜市</a></small></li>&nbsp
+                    <li><a href="">生活|哈尔滨球迷震惊中国足坛 刘同将来哈工大宣讲</a></small></li>
+                    <li><small><a href="">鲜城|萌妹子必选春夏鲜亮潮服 蒙奇奇世界萌化芳心</a></small></li>
+                    <li><small><a href="">鲜城|只爱芝士做一只高傲的猫 这件咖啡馆有喵出没</a></small></li>
+                    <li><small><a href="">旅游|黑龙江如此任性的桥你见过吗 4大特色民族村</a></small></li>
+                    <li><small><a href="">旅游|巴彦自驾一日游攻略 带你游哈尔滨各国领事馆</a></small></li>
+                    <li><small><a href="">旅游|只有1%的人领略过的美景 不为人知的北京十宗最</a></small></li>
+                    <li><small><a href="">汽车|江淮瑞风第二代S5 新汉兰达哈市到店60秒解决</a></small></li>
+                    <li><small><a href="">汽车|江铃新SUV本月20日发布 上海车展将取消车模</a></small></li>
+                    <li><small><a href="">汽车|停车被堵找不到车主怎么办 俄汽车销量滑坡</a></small></li>
+                    <li><small><a href="">哈尔滨同城交友点在这里 电影达人免费观影团</a></small></li>
+                    <li><small><a href="">爆款零食超全总结 10元包邮小吃搜罗</a></small></li>
+                    <li><small><a href="">高僧圆寂17年肉身不腐 中国田径队时尚大片</a></small></li>
+                    <li><small><a href="">哈尔滨巴彦男子索要180万款未果 用刀捅死夫妻俩（图）</a></small></li>
+                    <li><small><a href="">马里奥大叔已被网友玩坏 快来膜拜黑大学霸</a></small></li>
+                    <li><small><a href="">马里奥大叔已被网友玩坏 快来膜拜黑大学霸</a></small></li>
+                    <li><small><a href="">哈尔滨实用街道大全 要啥就去哪 哈尔滨著名七大夜市</a></small></li>
+                    <li><small><a href="">生活|哈尔滨球迷震惊中国足坛 刘同将来哈工大宣讲</a></small></li>
+                    <li><small><a href="">鲜城|萌妹子必选春夏鲜亮潮服 蒙奇奇世界萌化芳心</a></small></li>
+
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+     <div style="clear:both"></div>
+
+     <div class="d5">
+         <div><p>新浪产品</p></div>
+         <div class="d5-1">
+            <a href=""><img src="sina.png"></a>
+            <a href=""><img src="新浪财经.png"></a>
+            <a href=""><img src="新浪体育.png"></a>
+         </div>
+         <div class="d5-2">
+            <ul class="d5-2-ul">
+                <li><a href="">新浪新闻</a></li>
+                <li><a href="">新浪财经</a></li>
+                <li><a href="">新浪体育</a></li>
+            </ul>
+         </div>
+         <div style="clear:both"></div>
+         <div class="d5-3"></div>
+         <div class="d5-2">
+             <ul class="d5-2-ul">
+                 <li><a href="">新浪娱乐</a></li>
+                 <li><a href="">新浪公开课</a></li>
+                 <li><a href="">天气通</a></li>
+             </ul>
+         </div>
+         <div class="d5-2">
+             <ul class="d5-2-ul">
+                 <li><a href="">新浪博客</a></li>
+                 <li><a href="">新浪秒拍</a></li>
+                 <li><a href="">新浪微博</a></li>
+             </ul>
+         </div>
+         </div>
+
+
+    <div class="d6">
+        <div class="d4-3-1">
+            <ul class="pagetag3">
+                <li><a href="">猜你喜欢 《·····················》</a></li>
+                <li><a href="">热门话题</a></li>
+            </ul>
+        </div>
+         <div class="d6-2">
+             <ul>
+                 <li><a href="">12星座没在怕的</a></li>
+                 <li><a href="">组图：15岁萌少女整容变蛇精 高调炫富遭抨击</a></li>
+                 <li><a href="">枸杞子一种吃法治阳痿</a></li>
+                 <li><a href="">黄宏曾借筹备厂庆接近徐才厚并获认可</a></li>
+                 <li><a href="">万万没想到：图说抗日剧中的神台词</a></li>
+                 <li><a href="">不带箱子被遣返？韩国：绝对不会</a></li>
+                 <li><a href="">苹果在Apple Watch上还留有秘密“杀手锏”</a></li>
+                 <li><a href="">致歉信</a></li>
+             </ul>
+             <div style="border:1px solid #E9E9E9;"></div>
+             <div class="d6-2-1">
+                 <pre>
+沈梦辰之前接受质疑《爸爸3》广告卖出11.7亿
+投资海淀 | 中关村国家示范区 海淀区1+4+1政策体系
+             </div>
+         </div>
+
+     </div>
+
+
+    <div style="clear:both"></div>
+    <div class="d7">
+        <div class="d7-1">
+        <a href=""><img src="焦点直播.png" width="242px"></a>
+        </div>
+
+        <div class="d7-2">
+            <div class="d7-2-1">
+
+                <ul class="pagetag1" style="padding:0">
+                    <li><a href="">体育</a></li>
+                    <li><a href="">NBA</a></li>
+                    <li><a href="">体育视频</a></li>
+                    <li style="padding:0"><a:href="" style="font-size:8px;color:#7B7B7B">英超</a:></li>
+                    <li style="padding:0"><a href="" style="font-size:8px;color:#7B7B7B">欧冠</a></li>
+                    <li style="padding:0"><a href="" style="font-size:8px;color:#7B7B7B">花滑</a></li>
+                    <li style="padding:0"><a href="" style="font-size:8px;color:#7B7B7B">网球</a></li>
+
+                </ul>
+            </div>
+
+            <div class="d7-2-2">
+                <div class="d7-2-2-1">
+                    <a href=""><img src="西甲.png"></a>
+                </div>
+                <div class="d7-2-2-2">
+                    <ul>
+                        <li><a href="">NBA-水花兄弟57分勇士克森林狼</a></li>
+                        <li><a href="">贝弗利希望季后赛复出</a></li>
+                        <li><a href="">门罗加盟尼克斯几乎板上钉钉？</a></li>
+                        <li><a href="">林书豪左膝受治疗缺席训练</a></li>
+                    </ul>
+                </div>
+                <div style="clear:both"></div>
+                <div class="d7-2-2-3">
+                    <ul>
+                        <li><a href="">英超-23时直播曼联VS曼城 正博切尔西 阿森纳8连胜</a></li>
+                        <li><a href="">意甲-2:45视频直播AC米兰出站 尤文负垫底队 国米3-0</a></li>
+                        <li><a href="">西甲-C罗破门皇马3-0 梅西破门巴萨2-0变2-2</a></li>
+                        <li><a href="">F130.com中国站汉密尔顿夺第4冠 高清图 小汉举香槟喷宝贝脸</a></li>
+                        <li><a href="">篮球峰会周琦2分3板3帽 GOLF大师赛飞人领先五次回春</a></li>
+                        <li><a href="">博客-午志：鲁能防线问题 专栏-杨华：呼唤平民体坛英雄</a></li>
+                        <li><a href="">美国赌神投注NBA年收入2千万（图）大乐透开1注1000万</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="d7-2-3">
+                <div class="d7-2-3-1">
+                    <ul class="pagetag1" style="padding:0">
+                        <li><a href="">汽车</a></li>
+                        <li><a href="">购车</a></li>
+                        <li><a href="">图赏</a></li>
+
+                        <li ><a href="" style="font-size:8px;color:#7B7B7B">搜车型</a></li>
+                    </ul>
+                </div>
+                <div style="clear:both"></div>
+                <div class="d7-2-3-2">
+                    <a href=""><img src="迈锐宝.png" width="106px"></a>
+                </div>
+                <div class="d7-2-3-3">
+                    <ul>
+                        <li><a href="">北京上演“速度与激情”两超跑相撞</a></li>
+                        <li><a href="">试驾红旗H7 1.8T 售价降至30万内</a></li>
+                        <li><a href="">广本首款7座级SUV上海亮相搭2.0T</a></li>
+                        <li><a href="">居家必备 评测7座中型SUV索兰托L</a></li>
+                    </ul>
+                </div>
+                <div style="clear:both"></div>
+
+                <div class="d7-2-3-4">
+                    <a href=""><img src="雪铁龙.png" width="106px"></a>
+                </div>
+                <div class="d7-2-3-5">
+                    <ul>
+                        <li><a href="">撼路者等上海车展中高端SUV盘点</a></li>
+                        <li><a href="">昂科威1.5T上市售21.99-25.99万</a></li>
+                        <li><a href="">新劲炫ASX/帕杰罗·劲畅售价曝光</a></li>
+                        <li><a href="">宝马20日发10款新车 X5混动领衔</a></li>
+                    </ul>
+                </div>
+                <div class="d7-2-3-6">
+                    <ul>
+                        <li><a href="">东风风神小型SUV谍照上海首发 江铃新SUV用对开式车门</a></li>
+                        <li><a href="">普锐斯两厢版入华采用国产动力 Model S 70D售价68.5万元</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="d8">
+            <a href=""><img src="下.png" width="1200px"></a>
+        </div>
+
+        <div class="d10">
+            <a href=""><img src="天猫.png" width="180px;"></a>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+</body>
+</html>
